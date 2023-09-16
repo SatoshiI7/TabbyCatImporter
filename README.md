@@ -14,5 +14,6 @@ Tabbycat Importer is a web application created using Node.js to upload debater /
    node server.js
    ```
    to start the local server.
-6. Access [localhost:3000](http://localhost:3000/).
-7. Press `ctrl+C` on command prompt when you want to quit.
+6. Access [localhost:3000](http://localhost:3000/). Start from settings.
+7. Fill in the template for [Teams](Teams.xlsx) and [Adjudicators](Adjudicators.xlsx) and upload them.
+8. Press `ctrl+C` on command prompt when you want to quit.
