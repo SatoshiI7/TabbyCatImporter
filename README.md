@@ -1,5 +1,5 @@
 # TabbycatImporter
-Tabby Cat Importer is a web application created using Node.js to upload debater / team / adjudicator data to [TabbycatDebate/tabbycat](https://github.com/TabbycatDebate/tabbycat).
+Tabbycat Importer is a web application created using Node.js to upload debater / team / adjudicator data to [TabbycatDebate/tabbycat](https://github.com/TabbycatDebate/tabbycat).
 ## How to use
 1. Install [Node.js](https://nodejs.org/en).
 2. Install this repository from **Code >> Download ZIP**.
