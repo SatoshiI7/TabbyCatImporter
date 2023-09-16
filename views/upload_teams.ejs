@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("partials/head.ejs") %>
+  <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+  <script src="upload_teams.js"></script>
+</head>
+
+<body>
+  <%- include("partials/header.ejs") %>
+  <div class="mx-3">
+
+    <ul class="alert alert-primary d-none" role="alert" style="list-style: none;" id="previous-results">
+    </ul>
+
+
+    <% if (canSubmit) { %>
+    <form>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Upload</label>
+        <input class="form-control" type="file" id="formFile">
+        <div id="formFileHelpBlock" class="form-text">
+          Supports the following keywords: team_name, team_reference, team_emoji, institution, team_category, speakerN_name, speakerN_email, speakerN_category, (N=1, 2, 3)
+        </div>
+      </div>
+      <div class="mb-3 form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="institutionPrefix">
+        <label class="form-check-label" for="institutionPrefix">Use institutional prefix</label>
+      </div>
+      <button type="button" class="btn btn-primary" id="submit">Submit</button>
+    </form>
+    <% } else { %>
+    <div class="alert alert-danger" role="alert">
+      You haven't configured the importer. Click <a href="settings">here</a>.
+    </div>
+    <% } %>
+    <div id="worksheet-area">
+
+    </div>
+
+  </div>
+
+  <%- include("partials/footer.ejs") %>
+</body>
+
+</html>

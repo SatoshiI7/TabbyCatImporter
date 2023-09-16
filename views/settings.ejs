@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+  <%- include("partials/header.ejs") %>
+  <div class="container">
+    <form action="/settings" method="post" class="mb-3">
+      <div class="mb-3">
+        <label for="url" class="form-label">URL</label>
+        <input type="url" class="form-control" id="url" name="url" aria-describedby="domainHelp" required>
+        <div id="domainHelp" class="form-text">e.g. https://ichocup2023.calicotab.com/14thichocup</div>
+      </div>
+      <div class="mb-3">
+        <label for="apiToken" class="form-label">API Token</label>
+        <input type="text" class="form-control" id="apiToken" name="apiToken" aria-describedby="tokenHelp" required>
+        <div id="tokenHelp" class="form-text">API Token, available from "Get API Token" on the home page.</div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <% if (locals.status) { %>
+    <% if (status == "SUCCESS") { %>
+    <div class="alert alert-success" role="alert">
+      <h4>Setting succeeded.</h4>
+    </div>
+    <% } else if (status == "ERROR") { %>
+    <div class="alert alert-danger" role="alert">
+      <h4>Setting failed</h4>
+      <p><%= error %></p>
+    </div>
+    <% } else if (status == "PRELOADED") { %>
+    <div class="alert alert-info" role="alert">
+      <h4>Another tab is already loaded</h4>
+      <p>The tab for <a href="<%= url %>"><%= url %></a> is already loaded.</p>
+    </div>
+    <% } %>
+    <% } %>
+  </div>
+
+  <%- include("partials/footer.ejs") %>
+</body>
+
+</html>
