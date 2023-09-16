@@ -6,12 +6,13 @@ Tabby Cat Importer is a web application created using Node.js to upload debater 
 ![Instructions](TabbycatImporter01.PNG)
 3. Expand the ZIP file. Copy the file path.
 ![Instructions](TabbycatImporter02.PNG)
-5. Open command prompt (cmd).
-6. Enter
-```
-cd (file path)
-npm install
-node server.js
-```
-to start the local server.
-8. Access [localhost:3000](http://localhost:3000/).
+4. Open command prompt (cmd).
+5. Enter
+   ```
+   cd (file path)
+   npm install
+   node server.js
+   ```
+   to start the local server.
+6. Access [localhost:3000](http://localhost:3000/).
+7. Press `ctrl+C` on command prompt when you want to quit.
