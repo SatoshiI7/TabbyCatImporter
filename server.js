@@ -26,7 +26,6 @@ app.get("/settings", (req, res) => {
 		config.status = "PRELOADED";
 		config.url = new URL(`../${slug}`, endpointUrl).href;
 	}
-	console.log(config);
 	res.render("settings.ejs", config);
 });
 
